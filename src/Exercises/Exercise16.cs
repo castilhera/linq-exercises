@@ -23,6 +23,10 @@ public class Exercise16
             new() { EmployeeName = "John", ProjectName = "Project E" }
         ];
 
-        return string.Empty;
+        return projects
+            .GroupBy(p => p.EmployeeName)
+            .OrderByDescending(g => g.Count())
+            .Select(g => g.Key)
+            .First();
     }
 }

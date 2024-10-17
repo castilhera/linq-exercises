@@ -52,6 +52,20 @@ public class Exercise17
             new Enrollment { StudentId = 3, CourseId = 2, Score = 60 }
         ];
 
-        return [];
+        return students
+            .GroupJoin(enrollments,
+                student => student.StudentId,
+                enrollment => enrollment.StudentId,
+                (student, enrollments) => new
+                {
+                    StudentName = student.Name,
+                    AverageScore = enrollments.Average(e => e.Score),
+                    MaxScore = enrollments.Max(e => e.Score)
+                })
+            .OrderByDescending(s => s.AverageScore)
+            .ThenByDescending(s => s.MaxScore)
+            .Select(s => s.StudentName)
+            .Take(3)
+            .ToList();
     }
 }

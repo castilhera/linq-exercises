@@ -24,6 +24,8 @@ public class Exercise13
             new() { Name = "Mike", Department = "IT", Salary = 80000 }
         ];
 
-        return [];
+        return employees
+            .GroupBy(e => e.Department)
+            .ToDictionary(g => g.Key, g => (g.Min(e => e.Salary), g.Max(e => e.Salary)));
     }
 }

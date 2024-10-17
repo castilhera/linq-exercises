@@ -13,6 +13,6 @@ public class Exercise05
         var filteredNumbers = numbers
             .Where(n => n > 50);
 
-        return 0.0;
+        return filteredNumbers.Average();
     }
 }

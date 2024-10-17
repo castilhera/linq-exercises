@@ -23,6 +23,12 @@ public class Exercise14
             new() { ProductName = "Monitor", Quantity = 5 }
         ];
 
-        return [];
+        return orders
+            .GroupBy(o => o.ProductName)
+            .Select(g => (ProductName: g.Key, TotalQuantity: g.Sum(o => o.Quantity)))
+            .OrderByDescending(x => x.TotalQuantity)
+            .ThenBy(x => x.ProductName)
+            .Take(3)
+            .ToList();
     }
 }

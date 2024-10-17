@@ -24,6 +24,6 @@ public class Exercise06
         var experiencedEmployees = employees
             .Where(e => e.YearsWithCompany > 5);
 
-        return 0;
+        return experiencedEmployees.Count();
     }
 }

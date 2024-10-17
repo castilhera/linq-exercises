@@ -12,6 +12,17 @@ public class Exercise15
         public int StudentScore { get; set; }
     }
 
+    public static double GetMedian(IEnumerable<int> values)
+    {
+        var valuesCount = values.Count();
+
+        return values
+           .Order()
+           .Skip((valuesCount - 1) / 2)
+           .Take(2 - valuesCount % 2)
+           .Average();
+    }
+
     public static Dictionary<string, double> GetMedianScoreBySubject()
     {
         List<Score> scores =
@@ -24,6 +35,8 @@ public class Exercise15
             new() { Subject = "Science", StudentScore = 91 }
         ];
 
-        return [];
+        return scores
+            .GroupBy(s => s.Subject)
+            .ToDictionary(g => g.Key, g => GetMedian(g.Select(s => s.StudentScore)));
     }
 }

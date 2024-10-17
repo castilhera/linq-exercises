@@ -24,6 +24,9 @@ public class Exercise12
             new() { Name = "Refrigerator", Category = "Appliances", Price = 800 }
         ];
 
-        return [];
+        return products
+            .Where(p => p.Price > 100)
+            .GroupBy(p => p.Category)
+            .ToDictionary(g => g.Key, g => g.Average(p => p.Price));
     }
 }

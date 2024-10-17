@@ -24,6 +24,7 @@ public class Exercise07
 
         var largeOrders = orders
             .Where(o => o.TotalAmount > 1000)
+            .OrderByDescending(o => o.OrderDate)
             .ToList();
 
         return largeOrders;

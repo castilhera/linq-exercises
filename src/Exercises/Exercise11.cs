@@ -22,6 +22,9 @@ public class Exercise11
             new() { CustomerName = "Bob", TotalAmount = 1000 }
         ];
 
-        return new Dictionary<string, decimal>();
+        return orders
+            .Where(o => o.TotalAmount > 1000)
+            .GroupBy(o => o.CustomerName)
+            .ToDictionary(g => g.Key, g => g.Sum(o => o.TotalAmount));
     }
 }

@@ -24,9 +24,12 @@ namespace Exercises
                 new() { Name = "Mike", Department = "IT", Salary = 63000 }
             ];
 
-            var highEarners = employees.Where(e => e.Salary > 60000);
+            var highEarners = employees
+                .Where(e => e.Salary > 60000)
+                .OrderBy(e => e.Name)
+                .GroupBy(e => e.Department);
 
-            return [];
+            return highEarners.ToDictionary(g => g.Key, g => g.ToList());
         }
     }
 }

@@ -22,7 +22,10 @@ namespace Exercises
                 new() { Date = new DateTime(2023, 1, 2), Temperature = 28 }
             ];
 
-            return [];
+            return records
+                .GroupBy(r => r.Date)
+                .Select(g => (g.Key, g.Max(r => r.Temperature)))
+                .ToList();
         }
     }
 }

@@ -14,12 +14,12 @@ public class Exercise01
     public static IEnumerable<string> GetResult()
     {
         var products = new List<Product>
-    {
-        new() { Name = "Banana", },
-        new() { Name = "Apple", },
-        new() { Name = "Cherry", }
-    };
+        {
+            new() { Name = "Banana", },
+            new() { Name = "Apple", },
+            new() { Name = "Cherry", }
+        };
 
-        return [];
+        return products.Select(p => p.Name).Order();
     }
 }
