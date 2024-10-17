@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise16
 {
     // Description:
@@ -6,20 +8,20 @@ public class Exercise16
 
     public class Project
     {
-        public string EmployeeName { get; set; }
-        public string ProjectName { get; set; }
+        public required string EmployeeName { get; set; }
+        public required string ProjectName { get; set; }
     }
 
     public static string GetEmployeeWithMostProjects()
     {
-        List<Project> projects = new List<Project>
-        {
-            new Project { EmployeeName = "John", ProjectName = "Project A" },
-            new Project { EmployeeName = "Jane", ProjectName = "Project B" },
-            new Project { EmployeeName = "John", ProjectName = "Project C" },
-            new Project { EmployeeName = "Jane", ProjectName = "Project D" },
-            new Project { EmployeeName = "John", ProjectName = "Project E" }
-        };
+        List<Project> projects =
+        [
+            new() { EmployeeName = "John", ProjectName = "Project A" },
+            new() { EmployeeName = "Jane", ProjectName = "Project B" },
+            new() { EmployeeName = "John", ProjectName = "Project C" },
+            new() { EmployeeName = "Jane", ProjectName = "Project D" },
+            new() { EmployeeName = "John", ProjectName = "Project E" }
+        ];
 
         return string.Empty;
     }

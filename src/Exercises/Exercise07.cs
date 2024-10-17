@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise07
 {
     // Description:
@@ -13,14 +15,16 @@ public class Exercise07
 
     public static List<Order> GetLargeOrders()
     {
-        List<Order> orders = new List<Order>
-        {
+        List<Order> orders =
+        [
             new Order { OrderId = 1, OrderDate = new DateTime(2023, 1, 1), TotalAmount = 1200 },
             new Order { OrderId = 2, OrderDate = new DateTime(2023, 2, 1), TotalAmount = 800 },
             new Order { OrderId = 3, OrderDate = new DateTime(2023, 3, 1), TotalAmount = 1500 }
-        };
+        ];
 
-        var largeOrders = orders.Where(o => o.TotalAmount > 1000).ToList();
+        var largeOrders = orders
+            .Where(o => o.TotalAmount > 1000)
+            .ToList();
 
         return largeOrders;
     }

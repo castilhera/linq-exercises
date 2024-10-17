@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise11
 {
     // Description:
@@ -6,19 +8,19 @@ public class Exercise11
 
     public class Order
     {
-        public string CustomerName { get; set; }
+        public required string CustomerName { get; set; }
         public decimal TotalAmount { get; set; }
     }
 
     public static Dictionary<string, decimal> GetTotalAmountByCustomer()
     {
-        List<Order> orders = new List<Order>
-        {
-            new Order { CustomerName = "Alice", TotalAmount = 1200 },
-            new Order { CustomerName = "Bob", TotalAmount = 800 },
-            new Order { CustomerName = "Alice", TotalAmount = 1500 },
-            new Order { CustomerName = "Bob", TotalAmount = 1000 }
-        };
+        List<Order> orders =
+        [
+            new() { CustomerName = "Alice", TotalAmount = 1200 },
+            new() { CustomerName = "Bob", TotalAmount = 800 },
+            new() { CustomerName = "Alice", TotalAmount = 1500 },
+            new() { CustomerName = "Bob", TotalAmount = 1000 }
+        ];
 
         return new Dictionary<string, decimal>();
     }

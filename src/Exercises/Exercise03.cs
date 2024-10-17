@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise03
 {
     // Description:
@@ -6,20 +8,23 @@ public class Exercise03
 
     public class Student
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
         public int Marks { get; set; }
     }
 
     public static List<string> GetTopStudents()
     {
-        List<Student> students = new List<Student>
-        {
-            new Student { Name = "Charlie", Marks = 78 },
-            new Student { Name = "Alice", Marks = 85 },
-            new Student { Name = "Bob", Marks = 65 },
-        };
+        List<Student> students =
+        [
+            new() { Name = "Charlie", Marks = 78 },
+            new() { Name = "Alice", Marks = 85 },
+            new() { Name = "Bob", Marks = 65 },
+        ];
 
-        var topStudents = students.Where(s => s.Marks > 75).Select(s => s.Name).ToList();
+        var topStudents = students
+            .Where(s => s.Marks > 75)
+            .Select(s => s.Name)
+            .ToList();
 
         return topStudents;
     }

@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise14
 {
     // Description:
@@ -6,21 +8,21 @@ public class Exercise14
 
     public class Order
     {
-        public string ProductName { get; set; }
+        public required string ProductName { get; set; }
         public int Quantity { get; set; }
     }
 
     public static List<(string ProductName, int TotalQuantity)> GetTop3ProductsByQuantity()
     {
-        List<Order> orders = new List<Order>
-        {
-            new Order { ProductName = "Laptop", Quantity = 5 },
-            new Order { ProductName = "Headphones", Quantity = 20 },
-            new Order { ProductName = "Laptop", Quantity = 15 },
-            new Order { ProductName = "Monitor", Quantity = 10 },
-            new Order { ProductName = "Monitor", Quantity = 5 }
-        };
+        List<Order> orders =
+        [
+            new() { ProductName = "Laptop", Quantity = 5 },
+            new() { ProductName = "Headphones", Quantity = 20 },
+            new() { ProductName = "Laptop", Quantity = 15 },
+            new() { ProductName = "Monitor", Quantity = 10 },
+            new() { ProductName = "Monitor", Quantity = 5 }
+        ];
 
-        return new List<(string ProductName, int TotalQuantity)>();
+        return [];
     }
 }

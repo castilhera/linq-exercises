@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise15
 {
     // Description:
@@ -6,22 +8,22 @@ public class Exercise15
 
     public class Score
     {
-        public string Subject { get; set; }
+        public required string Subject { get; set; }
         public int StudentScore { get; set; }
     }
 
     public static Dictionary<string, double> GetMedianScoreBySubject()
     {
-        List<Score> scores = new List<Score>
-        {
-            new Score { Subject = "Math", StudentScore = 85 },
-            new Score { Subject = "Math", StudentScore = 78 },
-            new Score { Subject = "Math", StudentScore = 92 },
-            new Score { Subject = "Science", StudentScore = 88 },
-            new Score { Subject = "Science", StudentScore = 74 },
-            new Score { Subject = "Science", StudentScore = 91 }
-        };
+        List<Score> scores =
+        [
+            new() { Subject = "Math", StudentScore = 85 },
+            new() { Subject = "Math", StudentScore = 78 },
+            new() { Subject = "Math", StudentScore = 92 },
+            new() { Subject = "Science", StudentScore = 88 },
+            new() { Subject = "Science", StudentScore = 74 },
+            new() { Subject = "Science", StudentScore = 91 }
+        ];
 
-        return new Dictionary<string, double>();
+        return [];
     }
 }

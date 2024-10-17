@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise05
 {
     // Description:
@@ -6,9 +8,10 @@ public class Exercise05
 
     public static double GetAverageOfNumbersGreaterThan50()
     {
-        List<int> numbers = new List<int> { 10, 60, 45, 75, 30, 55 };
+        List<int> numbers = [10, 60, 45, 75, 30, 55];
 
-        var filteredNumbers = numbers.Where(n => n > 50);
+        var filteredNumbers = numbers
+            .Where(n => n > 50);
 
         return 0.0;
     }

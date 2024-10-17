@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise13
 {
     // Description:
@@ -6,22 +8,22 @@ public class Exercise13
 
     public class Employee
     {
-        public string Name { get; set; }
-        public string Department { get; set; }
+        public required string Name { get; set; }
+        public required string Department { get; set; }
         public decimal Salary { get; set; }
     }
 
     public static Dictionary<string, (decimal MinSalary, decimal MaxSalary)> GetSalariesByDepartment()
     {
-        List<Employee> employees = new List<Employee>
-        {
-            new Employee { Name = "John", Department = "HR", Salary = 50000 },
-            new Employee { Name = "Jane", Department = "IT", Salary = 70000 },
-            new Employee { Name = "Joe", Department = "IT", Salary = 60000 },
-            new Employee { Name = "Anna", Department = "HR", Salary = 55000 },
-            new Employee { Name = "Mike", Department = "IT", Salary = 80000 }
-        };
+        List<Employee> employees =
+        [
+            new() { Name = "John", Department = "HR", Salary = 50000 },
+            new() { Name = "Jane", Department = "IT", Salary = 70000 },
+            new() { Name = "Joe", Department = "IT", Salary = 60000 },
+            new() { Name = "Anna", Department = "HR", Salary = 55000 },
+            new() { Name = "Mike", Department = "IT", Salary = 80000 }
+        ];
 
-        return new Dictionary<string, (decimal MinSalary, decimal MaxSalary)>();
+        return [];
     }
 }

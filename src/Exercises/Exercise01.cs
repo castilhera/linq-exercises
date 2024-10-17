@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise01
 {
     // Description:
@@ -6,17 +8,17 @@ public class Exercise01
 
     class Product
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
     }
 
     public static IEnumerable<string> GetResult()
     {
         var products = new List<Product>
-        {
-            new Product { Name = "Banana", },
-            new Product { Name = "Apple", },
-            new Product { Name = "Cherry", }
-        };
+    {
+        new() { Name = "Banana", },
+        new() { Name = "Apple", },
+        new() { Name = "Cherry", }
+    };
 
         return [];
     }

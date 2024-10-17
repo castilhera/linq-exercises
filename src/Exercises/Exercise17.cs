@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise17
 {
     // Description:
@@ -9,13 +11,13 @@ public class Exercise17
     public class Student
     {
         public int StudentId { get; set; }
-        public string Name { get; set; }
+        public required string Name { get; set; }
     }
 
     public class Course
     {
         public int CourseId { get; set; }
-        public string CourseName { get; set; }
+        public required string CourseName { get; set; }
     }
 
     public class Enrollment
@@ -27,29 +29,29 @@ public class Exercise17
 
     public static List<string> GetTop3StudentsByAverageScore()
     {
-        List<Student> students = new List<Student>
-        {
+        List<Student> students =
+        [
             new Student { StudentId = 1, Name = "Alice" },
             new Student { StudentId = 2, Name = "Bob" },
             new Student { StudentId = 3, Name = "Charlie" }
-        };
+        ];
 
-        List<Course> courses = new List<Course>
-        {
+        List<Course> courses =
+        [
             new Course { CourseId = 1, CourseName = "Math" },
             new Course { CourseId = 2, CourseName = "Science" }
-        };
+        ];
 
-        List<Enrollment> enrollments = new List<Enrollment>
-        {
+        List<Enrollment> enrollments =
+        [
             new Enrollment { StudentId = 1, CourseId = 1, Score = 95 },
             new Enrollment { StudentId = 1, CourseId = 2, Score = 85 },
             new Enrollment { StudentId = 2, CourseId = 1, Score = 80 },
             new Enrollment { StudentId = 2, CourseId = 2, Score = 70 },
             new Enrollment { StudentId = 3, CourseId = 1, Score = 90 },
             new Enrollment { StudentId = 3, CourseId = 2, Score = 60 }
-        };
+        ];
 
-        return new List<string>();
+        return [];
     }
 }

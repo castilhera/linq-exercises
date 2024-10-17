@@ -1,3 +1,5 @@
+namespace Exercises;
+
 public class Exercise06
 {
     // Description:
@@ -6,20 +8,21 @@ public class Exercise06
 
     public class Employee
     {
-        public string Name { get; set; }
+        public required string Name { get; set; }
         public int YearsWithCompany { get; set; }
     }
 
     public static int GetExperiencedEmployeeCount()
     {
-        List<Employee> employees = new List<Employee>
-        {
+        List<Employee> employees =
+        [
             new Employee { Name = "John", YearsWithCompany = 6 },
             new Employee { Name = "Jane", YearsWithCompany = 4 },
             new Employee { Name = "Joe", YearsWithCompany = 7 }
-        };
+        ];
 
-        var experiencedEmployees = employees.Where(e => e.YearsWithCompany > 5);
+        var experiencedEmployees = employees
+            .Where(e => e.YearsWithCompany > 5);
 
         return 0;
     }
