@@ -1,0 +1,23 @@
+public class Exercise01
+{
+    // Description:
+    // The given LINQ query retrieves a list of product names from a collection but does not sort them.
+    // Fix the query to return the names in alphabetical order.
+
+    class Product
+    {
+        public string Name { get; set; }
+    }
+
+    public static IEnumerable<string> GetResult()
+    {
+        var products = new List<Product>
+        {
+            new Product { Name = "Banana", },
+            new Product { Name = "Apple", },
+            new Product { Name = "Cherry", }
+        };
+
+        return [];
+    }
+}
