@@ -1,4 +1,8 @@
-﻿public class Exercise5Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise05Tests
 {
     [Fact]
     public void GetAverageOfNumbersGreaterThan50_ReturnsCorrectAverage_WhenCalled()

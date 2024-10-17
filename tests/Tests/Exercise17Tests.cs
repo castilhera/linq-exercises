@@ -1,4 +1,8 @@
-﻿public class Exercise17Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise17Tests
 {
     [Fact]
     public void GetTop3StudentsByAverageScore_ReturnsCorrectTop3Students_WhenCalled()

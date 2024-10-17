@@ -1,4 +1,8 @@
-﻿public class Exercise14Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise14Tests
 {
     [Fact]
     public void GetTop3ProductsByQuantity_ReturnsTop3ProductsByTotalQuantity_WhenCalled()

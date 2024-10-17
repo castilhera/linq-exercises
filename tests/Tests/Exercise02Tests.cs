@@ -1,4 +1,8 @@
-﻿public class Exercise2Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise02Tests
 {
     [Fact]
     public void GetEvenNumbers_ReturnsEvenNumbersInAscendingOrder_WhenCalled()

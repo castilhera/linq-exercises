@@ -1,4 +1,8 @@
-﻿public class Exercise15Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise15Tests
 {
     [Fact]
     public void GetMedianScoreBySubject_ReturnsCorrectMedianScoreGroupedBySubject_WhenCalled()

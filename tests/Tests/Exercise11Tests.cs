@@ -1,4 +1,8 @@
-﻿public class Exercise11Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise11Tests
 {
     [Fact]
     public void GetTotalAmountByCustomer_ReturnsCorrectTotalAmountGroupedByCustomer_WhenTotalAmountGreaterThan1000()

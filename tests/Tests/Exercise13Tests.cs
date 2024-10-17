@@ -1,4 +1,8 @@
-﻿public class Exercise13Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise13Tests
 {
     [Fact]
     public void GetSalariesByDepartment_ReturnsCorrectMinMaxSalaries_WhenGroupedByDepartment()

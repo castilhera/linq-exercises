@@ -1,4 +1,8 @@
-﻿public class Exercise9Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise09Tests
 {
     [Fact]
     public void GetDailyMaxTemperatures_ReturnsMaxTemperaturesOrderedByDate_WhenCalled()

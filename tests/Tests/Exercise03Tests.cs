@@ -1,4 +1,8 @@
-﻿public class Exercise3Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise03Tests
 {
     [Fact]
     public void GetTopStudents_ReturnsNamesInAlphabeticalOrder_WhenMarksAreAbove75()

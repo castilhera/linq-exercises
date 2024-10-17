@@ -1,4 +1,8 @@
-﻿public class Exercise6Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise06Tests
 {
     [Fact]
     public void GetExperiencedEmployeeCount_ReturnsCorrectCount_WhenEmployeesHaveMoreThanFiveYears()

@@ -1,4 +1,8 @@
-public class Exercise1Tests
+using Exercises;
+
+namespace Tests;
+
+public class Exercise01Tests
 {
     [Fact]
     public void GetResult_ReturnsNamesInAlphabeticalOrder_WhenCalled()

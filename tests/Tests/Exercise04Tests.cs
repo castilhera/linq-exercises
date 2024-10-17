@@ -1,4 +1,8 @@
-﻿public class Exercise4Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise04Tests
 {
     [Fact]
     public void GetLongWords_ReturnsWordsInDescendingAlphabeticalOrder_WhenLengthIsMoreThanFour()

@@ -1,4 +1,8 @@
-﻿public class Exercise16Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise16Tests
 {
     [Fact]
     public void GetEmployeeWithMostProjects_ReturnsCorrectEmployee_WhenCalled()

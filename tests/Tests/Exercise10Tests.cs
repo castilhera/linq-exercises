@@ -1,4 +1,8 @@
-﻿public class Exercise10Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise10Tests
 {
     [Fact]
     public void GetTotalPriceByCategory_ReturnsCorrectTotalPriceGroupedByCategory_WhenPriceGreaterThan100()

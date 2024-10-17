@@ -1,4 +1,8 @@
-﻿public class Exercise8Tests
+﻿using Exercises;
+
+namespace Tests;
+
+public class Exercise08Tests
 {
     [Fact]
     public void GetHighEarnersByDepartment_ReturnsGroupedAndOrderedEmployees_WhenSalariesGreaterThan60000()
@@ -14,15 +18,15 @@
             {
                 "HR", new List<Exercise08.Employee>
                 {
-                    new Exercise08.Employee { Name = "Anna", Department = "HR", Salary = 81000 },
-                    new Exercise08.Employee { Name = "John", Department = "HR", Salary = 65000 }
+                    new() { Name = "Anna", Department = "HR", Salary = 81000 },
+                    new() { Name = "John", Department = "HR", Salary = 65000 }
                 }
             },
             {
                 "IT", new List<Exercise08.Employee>
                 {
-                    new Exercise08.Employee { Name = "Jane", Department = "IT", Salary = 72000 },
-                    new Exercise08.Employee { Name = "Mike", Department = "IT", Salary = 63000 }
+                    new() { Name = "Jane", Department = "IT", Salary = 72000 },
+                    new() { Name = "Mike", Department = "IT", Salary = 63000 }
                 }
             }
         };
