@@ -20,6 +20,8 @@ public class Exercise01
             new() { Name = "Cherry", }
         };
 
-        return products.Select(p => p.Name).Order();
+        return products
+            .Select(p => p.Name)
+            .OrderBy(name => name);
     }
 }

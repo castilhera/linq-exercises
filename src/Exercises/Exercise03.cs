@@ -24,7 +24,7 @@ public class Exercise03
         var topStudents = students
             .Where(s => s.Marks > 75)
             .Select(s => s.Name)
-            .Order()
+            .OrderBy(name => name)
             .ToList();
 
         return topStudents;
