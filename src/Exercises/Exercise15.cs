@@ -17,7 +17,7 @@ public class Exercise15
         var valuesCount = values.Count();
 
         return values
-           .Order()
+           .OrderBy(v => v)
            .Skip((valuesCount - 1) / 2)
            .Take(2 - valuesCount % 2)
            .Average();

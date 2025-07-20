@@ -12,7 +12,7 @@ namespace Exercises
 
             var longWords = words
                 .Where(w => w.Length > 4)
-                .OrderDescending()
+                .OrderByDescending(w => w)
                 .ToList();
 
             return longWords;

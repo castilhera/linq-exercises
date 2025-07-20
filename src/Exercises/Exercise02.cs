@@ -12,7 +12,7 @@ public class Exercise02
 
         var evenNumbers = numbers
             .Where(n => n % 2 == 0)
-            .Order()
+            .OrderBy(n => n)
             .ToList();
 
         return evenNumbers;
