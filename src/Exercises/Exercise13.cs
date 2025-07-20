@@ -3,8 +3,8 @@ namespace Exercises;
 public class Exercise13
 {
     // Description:
-    // The given LINQ query retrieves a list of employees but does not identify the highest and lowest salary in each department.
-    // Enhance the query to group the employees by department and return the highest and lowest salary in each department.
+    // The given LINQ query retrieves a list of employees but does not identify the highest and lowest salaries in each department.
+    // Enhance the query to group the employees by department and return the highest and lowest salaries in each department.
 
     public class Employee
     {
